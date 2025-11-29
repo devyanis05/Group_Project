@@ -1,1 +1,134 @@
- 
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to bottom, #0b72d9, #4ea9ff);
+    color: white;
+}
+
+header input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.categories {
+    text-align: center;
+    padding: 15px;
+    background: white;
+}
+
+.categories button {
+    margin: 5px;
+    padding: 10px 18px;
+    border: none;
+    background: #0b72d9;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.items-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    padding: 20px;
+}
+
+.item-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.item-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item-card h3 {
+    margin: 10px 0 5px;
+}
+
+.item-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0b72d9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+} 
+
+/* for mobile  */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .categories button {
+        padding: 8px 14px;
+        font-size: 14px;
+        margin: 4px;
+    }
+
+    .items-container {
+        grid-template-columns: 1fr;   
+        padding: 10px;
+    }
+
+    .item-card {
+        padding: 10px;
+    }
+
+    .item-card h3 {
+        font-size: 16px;
+    }
+}
+
+/* for tablet */
+@media (min-width: 600px) and (max-width: 900px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .items-container {
+        grid-template-columns: repeat(2, 1fr);   
+        gap: 15px;
+    }
+
+    .categories button {
+        font-size: 15px;
+        padding: 10px 16px;
+    }
+}
+
+/* for laptop */
+@media (min-width: 900px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .items-container {
+        grid-template-columns: repeat(3, 1fr);  
+    }
+}
