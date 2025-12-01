@@ -8,8 +8,5 @@ function Items(category) {
     let selected = document.querySelectorAll(`[data="${category}"]`);
     selected.forEach(s => s.style.display = "block");
 
-    // // show all if category = "all"
-    // if(category === "all") {
-    //     all.forEach(a => a.style.display = "block");
-    // }
+    
 }
